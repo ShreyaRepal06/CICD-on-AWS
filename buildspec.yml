@@ -21,7 +21,7 @@ phases:
   build:
     commands:
       - echo "Deploying to EC2"
-      - ./ec2_pem_key> key.pem
+      - ec2_pem_key> key.pem
       - chmod 400 key.pem
       - |
         ssh -i key.pem -o StrictHostKeyChecking=no ec2_username@ec2_public_ip << EOF
